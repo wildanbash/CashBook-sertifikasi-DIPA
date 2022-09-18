@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="24dp"
+    tools:context=".SettingActivity">
+
+    <TextView
+        android:id="@+id/pengaturanTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pengaturan"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleGantiPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Ganti Password"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pengaturanTitle" />
+
+    <TextView
+        android:id="@+id/titlePasswordLama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Password Lama"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleGantiPassword" />
+
+    <EditText
+        android:id="@+id/formPasswordLama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukan Password Lama"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/titlePasswordLama" />
+
+    <TextView
+        android:id="@+id/titlePasswordBaru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password Baru"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formPasswordLama" />
+
+    <EditText
+        android:id="@+id/formPasswordBaru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukan Password Baru"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/titlePasswordBaru" />
+
+    <Button
+        android:id="@+id/btnChangePass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#3E9F96"
+        android:text="simpan"
+        app:layout_constraintTop_toBottomOf="@+id/formPasswordBaru" />
+
+    <Button
+        android:id="@+id/btnBackToMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#D39327"
+        android:text="Kembali"
+        app:layout_constraintTop_toBottomOf="@+id/btnChangePass" />
+
+    <Button
+        android:id="@+id/btnLogoutFromSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#AC2525"
+        android:text="Logout"
+        app:layout_constraintTop_toBottomOf="@+id/btnBackToMenu" />
+
+    <ImageView
+        android:id="@+id/photoMe"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_baseline_person_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/tanggalApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal: 17 September 2022"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/nimApp"
+        app:layout_constraintTop_toBottomOf="@+id/nimApp" />
+
+    <TextView
+        android:id="@+id/aboutThisApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="About This App.."
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/dibuatOlehApp"
+        app:layout_constraintStart_toEndOf="@+id/photoMe"
+        app:layout_constraintTop_toTopOf="@+id/photoMe"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/namakuApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama: Wildan Dawam Bash"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/nimApp"
+        app:layout_constraintStart_toStartOf="@+id/dibuatOlehApp"
+        app:layout_constraintTop_toBottomOf="@+id/dibuatOlehApp" />
+
+    <TextView
+        android:id="@+id/dibuatOlehApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aplikasi Ini Dibuat Oleh:"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/namakuApp"
+        app:layout_constraintStart_toStartOf="@+id/aboutThisApp"
+        app:layout_constraintTop_toBottomOf="@+id/aboutThisApp" />
+
+    <TextView
+        android:id="@+id/nimApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIM: 1841720166"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tanggalApp"
+        app:layout_constraintStart_toStartOf="@+id/namakuApp"
+        app:layout_constraintTop_toBottomOf="@+id/namakuApp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

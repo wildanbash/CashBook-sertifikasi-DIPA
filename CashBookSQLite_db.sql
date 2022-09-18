@@ -1,0 +1,17 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE android_metadata (locale TEXT);
+INSERT INTO android_metadata VALUES('en_US');
+CREATE TABLE session(id integer PRIMARY KEY, login text);
+INSERT INTO session VALUES(1,'ada');
+CREATE TABLE user(id_user integer PRIMARY KEY AUTOINCREMENT, username text, password text);
+INSERT INTO user VALUES(1,'user','aa');
+CREATE TABLE keuangan(id_keuangan integer PRIMARY KEY AUTOINCREMENT, tanggal text, nominal text, keterangan text, kategori text);
+INSERT INTO keuangan VALUES(1,'15/9/2022','1000000','gaji','Pemasukan');
+INSERT INTO keuangan VALUES(2,'17/9/2022','500000','makan','Pengeluaran');
+INSERT INTO keuangan VALUES(3,'18/9/2022','20000','Beli peralatan','Pengeluaran');
+INSERT INTO keuangan VALUES(4,'18/9/2022','50000','Beli Sapu','Pengeluaran');
+DELETE FROM sqlite_sequence;
+INSERT INTO sqlite_sequence VALUES('user',1);
+INSERT INTO sqlite_sequence VALUES('keuangan',4);
+COMMIT;
